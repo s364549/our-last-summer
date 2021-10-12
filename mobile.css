@@ -28,6 +28,10 @@
   margin: 25px;
   text-transform: uppercase;
 }
+#header ul {
+  display: none;
+  display: none;
+}
 
 * {
   box-sizing: border-box;
@@ -60,6 +64,7 @@ h2 {
   top: 20%;
   transform: translateY(-50%);
   overflow-y: auto;
+  margin-left: 0vw;
   max-height: 100vh;
   box-shadow: inset 0 0 0 200px rgb(255 255 255 / 10%);
   backdrop-filter: blur(10px);
@@ -71,6 +76,7 @@ h2 {
   position: absolute;
   top: 90%;
   transform: translateY(-50%);
+  margin-left: 0vw;
   overflow-y: auto;
   max-height: 100vh;
   box-shadow: inset 0 0 0 200px rgb(255 255 255 / 10%);
