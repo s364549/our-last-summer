@@ -73,6 +73,11 @@ h2 {
   padding: 1rem;
 }
 
+.screen img {
+  width: 50vw;
+  margin-left: 5vw;
+}
+
 .description {
   width: 30vw;
   position: absolute;
@@ -119,34 +124,29 @@ header > h1 {
 
 #pic1 {
   background-color: lightsalmon;
-  background-image: url(images/selfie.png);
 }
 
 #pic2 {
   background-color: orange;
-  background-image: url(images/drive.png);
 }
 
 #pic3 {
   background-color: lightsalmon;
-  background-image: url(images/gaming.png);
 }
 
 #pic4 {
   background-color: orange;
-  background-image: url(images/airport.png);
 }
 
 #pic5 {
   background-color: lightsalmon;
-  background-image: url(images/piglet.png);
 }
 
 #pic6 {
   background-color: orange;
-  background-image: url(images/beach.png);
 }
 
+/*
 @media(max-width: 800px){
   @font-face {
     font-family: CenturyGothic;
@@ -266,31 +266,27 @@ header > h1 {
   
   #pic1 {
     background-color: lightsalmon;
-    background-image: url(images/selfie.png);
   }
   
   #pic2 {
     background-color: orange;
-    background-image: url(images/drive.png);
   }
   
   #pic3 {
     background-color: lightsalmon;
-    background-image: url(images/gaming.png);
   }
   
   #pic4 {
     background-color: orange;
-    background-image: url(images/airport.png);
   }
   
   #pic5 {
     background-color: lightsalmon;
-    background-image: url(images/piglet.png);
   }
   
   #pic6 {
     background-color: orange;
-    background-image: url(images/beach.png);
   }
 }
+
+*/
