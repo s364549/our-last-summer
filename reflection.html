@@ -10,7 +10,54 @@
 </head>
 
 <body>
+  <header id="header" >
+    <nav>
+      <ul class="nav" media="only screen and (max-widht:960px)">
+        <li><a href="reflection.html" target="_blank">Reflection</a></li>
+        <li><a href="images/oblig2aDesktop.jpg" target="_blank">Desktop wireframe</a></li>
+        <li><a href="images/oblig2aMobile.jpg" target="_blank">Mobile wireframe</a></li>
+      </ul>
+    </nav>
+  </header>
   <p>
+    We began by discussing the overarching concept that we wanted for our website. 
+    To create an experience as immersive as possible, we agreed to
+    allocate one visible window height to each of the images, so that the user 
+    could view the photos and their accompanying description, one at a time. For 
+    the mobile version, due to the smaller screen size, we concluded that it would be more appropriate to dedicate
+    one screen height to the picture itself and its caption, then a following one for 
+    the accompanying text. We then created two wireframes, one for each version. 
+    In the two wireframes, one screen height is indicated by alternating colored rectangles.
+    For accessibility, we added same page links to our wireframes.
+
+    Starting out we layed out our planned html elements in the right order.
+    We assinged each section to the class screen, indicating one viewport height.
+    Using the pseudo-selector :first-child, we positioned the text container within each viewport
+    and changed its presentation. We assigned the captions to a .description class,
+    and positioned them likewise. At first we used the background-image CSS rule to add the pictures, 
+    but then considered it more sensible and responsive to add the photos as picture and img html elements.
     
+    The reasoning for using both picture, img and srcset nested within is to provide a fallback 
+    solution in case the offered source element fails to load or is unusable (Mozilla, 2021). 
+    The picture element tells the browser which image to use, we think is useful if the
+    user frequently resizes their window, since picture will immediately change the image source 
+    based on a media query. We believe the img element is more useful when the user's viewport remains 
+    the same throughout the browsing, which is the more realistic scenario. 
+    That is why we have placed the img element first within each picture element. Img 
+    We want to provide the option for the browser to pick the best source, which 
+    can save on bandwidth and loading times. Therefore we consider img to be the more 
+    responsive option of the two.
+
+    The most difficult part of implementing the two wireframes was scaling, both of the images and 
+    of the texts. When using flexbox, the images would stretch in every direction to 
+    adjust to its container. We could have solved this issue with the align-self attribute, 
+    but decided to not use flexbox and thus task ourselves with positioning each website element 
+    manually, giving ourselves more control. Using position: absolute, width, top and margin, we 
+    were able to place all of the elements exactly where we wanted. Since there is a virtually 
+    endless selection of mobile phones and consequently phone screen resolutions, we decided to 
+    let the pictures scale with the size of its viewport for the mobile version. 
+
+    Another challenge we encountered was
+
   </p>
 </body>
