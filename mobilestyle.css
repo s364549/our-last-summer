@@ -44,29 +44,29 @@ body {
 
 p {
   font-family: GillSansNova, sans-serif;
+  font-size: smaller;
 }
 
 h2 {
   font-size: 2.5rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .screen {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   position: relative;
 }
 
-.screen img {
-  width: 50vw;
-  max-height: 50vh;
-  top:20%;
+.screen picture {
+  margin-left: 10%;
 }
 
 .screen > *:first-child {
   width: 100vw;
-  position: absolute;
-  top: 20%;
+  position: relative;
+  top: 70%;
   transform: translateY(-50%);
   overflow-y: auto;
   margin-left: 0vw;
@@ -79,7 +79,7 @@ h2 {
 .description {
   width: 100vw;
   position: absolute;
-  top: 90%;
+  top: 37%;
   transform: translateY(-50%);
   margin-left: 0vw;
   overflow-y: auto;
