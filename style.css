@@ -9,10 +9,15 @@
   src: url(fonts/GillSansNova/GillSansNova.ttf);
 }
 
+a {
+  color: black;
+}
+
 #header {
   background-color: rgb(37, 37, 37);
   color: white;
   font-size: 1.5em;
+  text-align: center;
 }
 
 #header a {
@@ -75,6 +80,7 @@ h2 {
 .screen picture {
   width: 50vw;
   margin-left: 5vw;
+  height: 50vh;
 }
 
 .description {
@@ -99,8 +105,6 @@ h2 {
   margin-left: 14vw;
 }
 
-
-
 header > h1 {
   text-align: center;
   font-size: clamp(2rem, 8vw, 7rem);
@@ -117,6 +121,21 @@ header > h1 {
   background-color: rgb(255, 194, 170);
   background-attachment: scroll;
   box-shadow: none;
+}
+
+#pagelinks {
+  box-shadow: inset 0 0 0 200px rgb(255 255 255 / 10%);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  top: 65%;
+  text-align: center;
+  position: absolute;
+}
+
+#pagelinks li {
+  display: inline-block;
+  margin: 0 40px;
+  
 }
 
 #pic1 {
@@ -152,8 +171,7 @@ header > h1 {
   display: inline-block;
   margin-left: 14vw;
   position: absolute;
-  top: 70%;
-  transform: translateY(-50%);
+  top: 65%;
   overflow-y: auto;
   max-height: 100vh;
   box-shadow: inset 0 0 0 200px rgb(255 255 255 / 10%);
@@ -167,7 +185,20 @@ header > h1 {
 }
 
 #toplink {
-  background-color: orange;
+  background-color: orange
+}
+
+#toplink >*:first-child{
+  width: 70vw;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  margin-left: 14vw;
+  overflow-y: auto;
+  max-height: 100vh;
+  box-shadow: inset 0 0 0 200px rgb(255 255 255 / 10%);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
 }
 
 /*
