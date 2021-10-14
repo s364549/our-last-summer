@@ -16,7 +16,7 @@ a {
 #header {
   background-color: rgb(37, 37, 37);
   color: white;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
 }
 
@@ -35,7 +35,7 @@ a {
 
 #header ul > li {
   display: inline-block;
-  margin: 25px;
+  margin: 15px;
   text-transform: uppercase;
 }
 
@@ -53,8 +53,14 @@ p {
   font-family: GillSansNova, sans-serif;
 }
 
+h1 {
+  text-align: center;
+  font-size: clamp(2rem, 8vw, 7rem);
+  font-weight: bold;
+}
+
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 7rem);
   font-weight: bold;
 }
 
@@ -77,10 +83,11 @@ h2 {
   padding: 1rem;
 }
 
-.screen picture {
-  width: 50vw;
+picture {
   margin-left: 5vw;
-  height: 50vh;
+  max-height: 80vh;
+  position: absolute;
+  top:20%;
 }
 
 .description {
@@ -88,26 +95,18 @@ h2 {
   position: absolute;
   top: 80%;
   transform: translateY(-50%);
-  margin-left: 10vw;
+  margin-left: 5vw;
   overflow-y: auto;
   max-height: 100vh;
   box-shadow: inset 0 0 0 200px rgb(255 255 255 / 10%);
   backdrop-filter: blur(10px);
   padding: 1rem;
-}
-
-.description {
   font-size: smaller;
 }
 
 #ourlastsummer > * {
   width: 70vw;
   margin-left: 14vw;
-}
-
-header > h1 {
-  text-align: center;
-  font-size: clamp(2rem, 8vw, 7rem);
 }
 
 .screen {
@@ -165,6 +164,7 @@ header > h1 {
 #credits > * {
   width: 70vw;
   margin-left: 14vw;
+  font-weight: bold;
 }
 
 #participants {
