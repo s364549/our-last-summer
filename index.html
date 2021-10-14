@@ -49,10 +49,14 @@
 		</div>
 
     <picture>
-      <source srcset="images/selfie.png 400w, images/selfie-600.png 600w">
+      <source media="(max-width: 1100px)" srcset="images/selfie.png">
+      <source media="(min-width: 1101px)" srcset="images/selfie-600.png">
+
       <img srcset="images/selfie.png 400w, images/selfie-600.png 600w" 
       src="images/selfie.png" 
-      sizes="(max-width: 1000px) 400px, 600px" alt="Three people taking a selfie"/>
+      sizes="(max-width: 1100px) 400px, 600px" 
+      alt="Three people taking a selfie"/>
+
     </picture>
 
     <div>
@@ -75,8 +79,13 @@
 		</div>
 
     <picture>
-      <source srcset="images/drive.png">
-      <img src="images/drive.png" alt="Top text: Driving with Andreas Heavily motion blurred image of car doing sideways wheelie."/>
+      <source media="(max-width: 1100px)" srcset="images/drive.png">
+      <source media="(min-width: 1101px)" srcset="images/drive-600.png">
+
+      <img srcset="images/drive.png 400w, images/drive-600.png 600w"
+      src="images/drive-600.png" 
+      sizes="(max-width: 1100px) 400px, 600px" 
+      alt="Top text: Driving with Andreas. Heavily motion blurred image of car doing sideways wheelie.">
     </picture>
 
     <div>
@@ -100,8 +109,13 @@
 		</div>
 
     <picture>
-      <source srcset="images/gaming.png">
-      <img src="images/gaming.png" alt="Three people on couch, two holding video game controllers."/>
+      <source media="(max-width: 1100px)" srcset="images/gaming.png">
+      <source media="(min-width: 1101px)" srcset="images/gaming-600.png">
+      
+      <img srcset="images/gaming.png 400w, images/gaming-600.png 600w"
+      src="images/gaming.png" 
+      sizes="(max-width: 1100px) 400px, 600px" 
+      alt="Three people on couch, two holding video game controllers.">
     </picture>
 
     <div>
@@ -155,7 +169,9 @@
 		</div>
 
     <picture>
-      <source srcset="images/piglet.png">
+      <source media="(max-width: 1100px)" srcset="images/piglet.png">
+      <source media="(min-width: 1101px)" srcset="images/piglet-600.png">
+
       <img src="images/piglet.png" alt="Close-up of piglet"/>
     </picture>
 
@@ -184,8 +200,14 @@
 		</div>
 
     <picture>
-      <source srcset="images/beach.png">
-      <img src="images/beach.png" alt="Silhouette of person looking over beach water into sunset."/>
+      <!--
+      <source media="(max-width: 1100px)" srcset="images/beach.png">
+      <source media="(min-width: 1101px)" srcset="images/beach-600.png">
+      -->
+      <img srcset="images/beach.png 400w, images/beach-600.png 600w"
+      sizes="(max-width: 1100px) 400px, 600px"
+      src="images/beach-600.png"   
+      alt="Silhouette of person looking over beach water into sunset."/>
     </picture>
 
     <div>
