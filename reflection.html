@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" media="(min-width: 851px)" href="style.css">
+  <link rel="stylesheet" media="(max-width: 850px)" href="mobilestyle.css">
 </head>
 
 <body>
@@ -19,45 +20,71 @@
       </ul>
     </nav>
   </header>
-  <p>
-    We began by discussing the overarching concept that we wanted for our website. 
-    To create an experience as immersive as possible, we agreed to
-    allocate one visible window height to each of the images, so that the user 
-    could view the photos and their accompanying description, one at a time. For 
-    the mobile version, due to the smaller screen size, we concluded that it would be more appropriate to dedicate
-    one screen height to the picture itself and its caption, then a following one for 
-    the accompanying text. We then created two wireframes, one for each version. 
-    In the two wireframes, one screen height is indicated by alternating colored rectangles.
-    For accessibility, we added same page links to our wireframes.
+  
+  <div id="refltext">
+    <h1>Reflection.html</h1>
+    <p>
+      We began by discussing the overarching concept that we wanted for our website. 
+      To create an experience as immersive as possible, we agreed to allocate 
+      one visible window height to each of the images, so that the user could 
+      view the photos and their accompanying description, one at a time. For the 
+      mobile version, due to the smaller screen size, we concluded that it would be more 
+      appropriate to dedicate one screen height to the picture itself and its caption, then a 
+      following one for the accompanying text. We then created two wireframes, one for each version. In the two wireframes, one screen height is indicated by alternating coloured rectangles. For accessibility, we added same page links to our wireframes.
+    </p>
+    <p>
+      Starting out we laid out our planned <code>html</code> elements in the right order. 
+      We assigned each section to the class <code>.screen</code>, indicating one viewport height. 
+      Using the pseudo-selector <code>:first-child</code>, we positioned the text container within 
+      each viewport and changed its presentation. We assigned the captions to a <code>.description</code> 
+      class and positioned them likewise. At first, we used the <code>background-image</code> CSS rule to 
+      add the pictures, but then considered it more sensible and responsive to add the photos 
+      as <code>picture</code> and <code>img</code> html elements. 
+    </p>
+    <p>
+      The reasoning for using both <code>picture</code>, <code>img</code> and <code>srcset</code> nested in it is to provide a 
+      fallback solution in case the offered source element fails to load or is 
+      unusable (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture" target="_blank">Mozilla</a>, 2021). 
+      The <code>picture</code> element tells the browser which image to use, 
+      which we think is useful if the user frequently resizes their window, since picture will 
+      immediately change the image source based on a media query. We believe the <code>img</code> element 
+      is more useful when the user's viewport remains the same throughout the browsing, which is 
+      the more realistic scenario. That is why we have placed the <code>img</code> element first within each 
+      <code>picture</code> element. We want to provide the option for the browser to pick the best source, 
+      which can save on bandwidth and loading times. Therefore, we consider <code>img</code> to be the more 
+      responsive option of the two.
+    </p>
+    <p>
+      The most difficult part of implementing the two wireframes was scaling, both images and texts. 
+      When using flexbox, the images would stretch in every direction to adjust to its container. 
+      We could have solved this issue with the <code>align-self</code> attribute but decided to not use 
+      flexbox and thus task ourselves with positioning each website element manually, giving 
+      ourselves more control. Using <code>position: absolute</code>, <code>width:</code>, <code>top:</code> and <code>margin:</code>, we were able 
+      to place all of the elements exactly where we wanted. Since there is a virtually endless 
+      selection of mobile phones and consequently phone screen resolutions, we decided to let 
+      the pictures scale with the size of its viewport for the mobile version. 
+    </p>
+    <p>
+      Another challenge we encountered was implementing the mobile wireframe. 
+      We decided to link three separate stylesheets to our <code>html</code> document. First, 
+      we used <code>reset.css</code> (<a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Meyerweb</a>, 2011) to give ourselves a clean starting point. 
+      We then linked <code>style.css</code> to change the presentation of our desktop version. 
+      Initially, we added a media query within the same stylesheet, but we ultimately 
+      considered it to be more organized if we separate the two versions into each of 
+      their own stylesheets. The reason for creating two media queries in out <code>html</code> document 
+      (<code>media="(min-width: 851px)"</code> and <code>media="(max-width: 850px)"</code>) is to prevent any potential 
+      conflicts that would manifest themselves in the mobile version from changing CSS property 
+      values for the desktop version. We believe that keeping the two stylesheets independent 
+      from each other provides the highest degree of control and allows us to make any necessary 
+      fine adjustments to accommodate narrower displays. Such adjustments include reducing 
+      <code>font-size:</code> for the <code>p</code>, <code>h1</code> and <code>h2</code> html elements, centring header text, and centring our images.
+    </p>
+    <hr>
+    <h2>References</h2>
+    <ul>
+      <li>Meyer, Eric A., 2011 <a href="https://meyerweb.com/eric/tools/css/reset/">CSS Tools: Reset CSS</a>, Meyerweb</li>
+      <li>Mozilla, 2021, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">&#38;picture&#59;: The Picture element</a>, developer.mozilla.org</li>
+    </ul>
 
-    Starting out we layed out our planned html elements in the right order.
-    We assinged each section to the class screen, indicating one viewport height.
-    Using the pseudo-selector :first-child, we positioned the text container within each viewport
-    and changed its presentation. We assigned the captions to a .description class,
-    and positioned them likewise. At first we used the background-image CSS rule to add the pictures, 
-    but then considered it more sensible and responsive to add the photos as picture and img html elements.
-    
-    The reasoning for using both picture, img and srcset nested within is to provide a fallback 
-    solution in case the offered source element fails to load or is unusable (Mozilla, 2021). 
-    The picture element tells the browser which image to use, we think is useful if the
-    user frequently resizes their window, since picture will immediately change the image source 
-    based on a media query. We believe the img element is more useful when the user's viewport remains 
-    the same throughout the browsing, which is the more realistic scenario. 
-    That is why we have placed the img element first within each picture element. Img 
-    We want to provide the option for the browser to pick the best source, which 
-    can save on bandwidth and loading times. Therefore we consider img to be the more 
-    responsive option of the two.
-
-    The most difficult part of implementing the two wireframes was scaling, both of the images and 
-    of the texts. When using flexbox, the images would stretch in every direction to 
-    adjust to its container. We could have solved this issue with the align-self attribute, 
-    but decided to not use flexbox and thus task ourselves with positioning each website element 
-    manually, giving ourselves more control. Using position: absolute, width, top and margin, we 
-    were able to place all of the elements exactly where we wanted. Since there is a virtually 
-    endless selection of mobile phones and consequently phone screen resolutions, we decided to 
-    let the pictures scale with the size of its viewport for the mobile version. 
-
-    Another challenge we encountered was
-
-  </p>
+  </div>
 </body>

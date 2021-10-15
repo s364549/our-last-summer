@@ -200,147 +200,21 @@ picture, img {
   padding: 1rem;
 }
 
-/*
-@media(max-width: 800px){
-  @font-face {
-    font-family: CenturyGothic;
-    src: url(fonts/CenturyGothic/GOTHIC.TTF);
-  }
-  
-  @font-face {
-    font-family: GillSansNova;
-    src: url(fonts/GillSansNova/GillSansNova.ttf);
-  }
-  
-  #header {
-    background-color: rgb(37, 37, 37);
-    color: white;
-    font-size: 1.5em;
-  }
-  
-  #header a {
-    color: white;
-  }
-  
-  #header li{
-    line-height: 180%;
-    list-style-type: none;
-  }
-  
-  #header ul > li {
-    display: inline-block;
-    margin: 25px;
-    text-transform: uppercase;
-  }
-  #header ul {
-    display: inline-block;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-size: 1.3rem;
-    line-height: 1.5;
-    font-family: CenturyGothic, sans-serif;
-  }
-  
-  p {
-    font-family: GillSansNova, sans-serif;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  
-  .screen {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-  }
-  
-  .screen > *:first-child {
-    width: 100vw;
-    position: absolute;
-    top: 20%;
-    transform: translateY(-50%);
-    overflow-y: auto;
-    margin-left: 0vw;
-    max-height: 100vh;
-    box-shadow: inset 0 0 0 200px rgb(255 255 255 / 10%);
-    backdrop-filter: blur(10px);
-    padding: 1rem;
-  }
-  
-  .description {
-    width: 100vw;
-    position: absolute;
-    top: 90%;
-    transform: translateY(-50%);
-    margin-left: 0vw;
-    overflow-y: auto;
-    max-height: 100vh;
-    box-shadow: inset 0 0 0 200px rgb(255 255 255 / 10%);
-    backdrop-filter: blur(10px);
-    padding: 1rem;
-  }
-  
-  .description {
-    font-size: smaller;
-  }
-  
-  #ourlastsummer > * {
-    width: 70vw;
-    margin-left: 14vw;
-  }
-  
-  #ourlastsummer > header {
-    padding: 0;
-  }
-  
-  header > h1 {
-    text-align: center;
-    font-size: clamp(2rem, 8vw, 7rem);
-  }
-  
-  .screen {
-    background-repeat: no-repeat;
-    background-position: 0 50%;
-    background-attachment: fixed;
-    background-size: contain;
-  }
-  
-  #ourlastsummer {
-    background-color: rgb(255, 194, 170);
-    background-attachment: scroll;
-    box-shadow: none;
-  }
-  
-  #pic1 {
-    background-color: lightsalmon;
-  }
-  
-  #pic2 {
-    background-color: orange;
-  }
-  
-  #pic3 {
-    background-color: lightsalmon;
-  }
-  
-  #pic4 {
-    background-color: orange;
-  }
-  
-  #pic5 {
-    background-color: lightsalmon;
-  }
-  
-  #pic6 {
-    background-color: orange;
-  }
+#refltext > h2 {
+  font-size: 2rem;
 }
 
-*/
+#refltext li {
+  font-size: 0.8rem;
+  margin: 1rem;
+}
+
+#refltext > p {
+  margin: 10px;
+  text-indent: 30px;
+  line-height: 180%;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+}
